@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -19,6 +19,24 @@
     </div>
   </header>
 
+  <div id="disclaimer-backdrop" class="disclaimer-backdrop" aria-hidden="true">
+    <div id="disclaimer-panel" class="disclaimer-panel" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
+      <button id="disclaimer-close" class="disclaimer-close" type="button" aria-label="Close disclaimer">&times;</button>
+      <h2 id="disclaimer-title">About This Story</h2>
+      <p>This interactive map follows a Porsche 911 from order confirmation in Philadelphia through production in Stuttgart, transatlantic logistics, and delivery back to the United States.</p>
+      <p>The story highlights how production slots, export windows, and transport handoffs stay sequenced so the first drive feels effortless.</p>
+      <p>Primary data and references:</p>
+      <ul class="disclaimer-sources">
+        <li>Porsche AG production and logistics communications</li>
+        <li>GADM and Esri Living Atlas boundary datasets</li>
+        <li>Georgia Ports Authority &amp; Koopman Car Terminal public releases</li>
+        <li>Leaflet with Esri Light Gray Canvas basemaps</li>
+      </ul>
+      <p>Routes and footprints are schematic and simplified for storytelling.</p>
+      <button id="disclaimer-continue" class="disclaimer-action" type="button">Explore the journey</button>
+    </div>
+  </div>
+
   <div id="app">
     <div id="map" aria-label="Map showing supply chain locations"></div>
 
@@ -28,48 +46,90 @@
       <div id="region-info-body"></div>
     </div>
 
-    <aside id="story" aria-live="polite">
-      <button id="story-collapse" class="story-collapse" type="button" aria-label="Collapse story panel">&rsaquo;</button>
+    <aside id="story" class="collapsed" aria-live="polite">
+      <button id="story-collapse" class="story-collapse hidden" type="button" aria-label="Collapse story panel">&rsaquo;</button>
       <div class="story-content" id="story-content">
         <section class="step" data-step="Opening">
           <h2>Opening &ndash; A 911 is a promise</h2>
-          <p>A 911 order doesn&rsquo;t begin with a VIN; it begins with intent. From the instant a customer in Philadelphia confirms the build, a precise chain wakes up&mdash;engineering, supply, transport, and handover&mdash;linking the car&rsquo;s birthplace in Stuttgart to the streets where it will live.</p>
-          <p>The journey is designed to be uneventful in the best way: predictable slots, clean handoffs, and time buffers that protect the only moment that truly matters&mdash;the first drive.</p>
+          <div class="step-text">
+            <p>A 911 order doesn&rsquo;t begin with a VIN; it begins with intent. From the instant a customer in Philadelphia confirms the build, a precise chain wakes up&mdash;engineering, supply, transport, and handover&mdash;linking the car&rsquo;s birthplace in Stuttgart to the streets where it will live.</p>
+            <p>The journey is designed to be uneventful in the best way: predictable slots, clean handoffs, and time buffers that protect the only moment that truly matters&mdash;the first drive.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page%201.jpg" alt="Customer confirming a Porsche 911 build in Philadelphia" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Order placed">
           <h2>Order placed in Philadelphia</h2>
-          <p>A buyer in the Philadelphia area finalizes the specification&mdash;paint, wheels, interior, packages. The order is validated, assigned a provisional build week, and transmitted to the 911 line in Stuttgart-Zuffenhausen.</p>
-          <p>Scheduling isn&rsquo;t just about the assembly line. Port windows, rail capacity, and ocean vessel space are coordinated upstream so that once the car is built, it doesn&rsquo;t sit.</p>
+          <div class="step-text">
+            <p>A buyer in the Philadelphia area finalizes the specification&mdash;paint, wheels, interior, packages. The order is validated, assigned a provisional build week, and transmitted to the 911 line in Stuttgart-Zuffenhausen.</p>
+            <p>Scheduling isn&rsquo;t just about the assembly line. Port windows, rail capacity, and ocean vessel space are coordinated upstream so that once the car is built, it doesn&rsquo;t sit.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page2.jpg" alt="Porsche 911 specification sheet being reviewed" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Materials sourced">
           <h2>Materials gathered for your build</h2>
-          <p>Before the body and drivetrain meet, key components and trims are staged around Stuttgart. Interior leathers are sourced from Scotland&rsquo;s Renfrewshire region. Synthetic suede comes from central Italy (Terni province). Carbon-fiber prepreg arrives from the eastern Netherlands (Overijssel). Carbon-ceramic braking components are produced in Bavaria (around Augsburg/Meitingen).</p>
-          <p>These flows travel by road and rail under controlled timelines. The goal is simple: the right parts at the right gate, minutes before they&rsquo;re needed, never days.</p>
+          <div class="step-text">
+            <p>Before the body and drivetrain meet, key components and trims are staged around Stuttgart. Interior leathers are sourced from Scotland&rsquo;s Renfrewshire region. Synthetic suede comes from central Italy (Terni province). Carbon-fiber prepreg arrives from the eastern Netherlands (Overijssel). Carbon-ceramic braking components are produced in Bavaria (around Augsburg/Meitingen).</p>
+            <p>These flows travel by road and rail under controlled timelines. The goal is simple: the right parts at the right gate, minutes before they&rsquo;re needed, never days.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page3.jpg" alt="Components and materials staged for Porsche 911 production" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Intra-Europe logistics">
-          <h2>Plant to port &ndash; Bremerhaven</h2>
-          <p>Assembly, paint, &ldquo;marriage&rdquo; of drivetrain and body, and end-of-line checks culminate in a road-test loop. Once cleared, completed cars are sealed and transferred to secure compounds for outbound logistics.</p>
-          <p>From Stuttgart the convoy heads north by truck and rail to a deep-water Ro/Ro hub&mdash;typically Bremerhaven on Germany&rsquo;s North Sea, with Amsterdam as an alternate terminal when slots or sailings favor that route.</p>
+          <h2>Plant to port - Bremerhaven</h2>
+          <div class="step-text">
+            <p>Assembly, paint, &ldquo;marriage&rdquo; of drivetrain and body, and end-of-line checks culminate in a road-test loop. Once cleared, completed cars are sealed and transferred to secure compounds for outbound logistics.</p>
+            <p>From Stuttgart the convoy heads north by truck and rail to a deep-water Ro/Ro hub&mdash;typically Bremerhaven on Germany&rsquo;s North Sea, with Amsterdam as an alternate terminal when slots or sailings favor that route.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page4.jpg" alt="Convoy of finished 911s heading toward Bremerhaven" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Ocean crossing">
           <h2>Across the Atlantic</h2>
-          <p>On the ocean leg, reliability beats raw speed. Vehicle carriers depart on set rotations, track weather, and sequence port calls for minimal idle time. While the ship is mid-Atlantic, U.S. inland transport and processing windows are already booked.</p>
-          <p>Arrival is at Colonel&rsquo;s Island Terminal in Brunswick, Georgia&mdash;purpose-built for autos. Vehicles are scanned, inspected, and configured for the U.S. market where needed, then released to carriers for the final leg.</p>
+          <div class="step-text">
+            <p>On the ocean leg, reliability beats raw speed. Vehicle carriers depart on set rotations, track weather, and sequence port calls for minimal idle time. While the ship is mid-Atlantic, U.S. inland transport and processing windows are already booked.</p>
+            <p>Arrival is at Colonel&rsquo;s Island Terminal in Brunswick, Georgia&mdash;purpose-built for autos. Vehicles are scanned, inspected, and configured for the U.S. market where needed, then released to carriers for the final leg.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page5.jpg" alt="Roll-on roll-off vessel crossing the Atlantic" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Domestic distribution">
           <h2>Northbound on I-95</h2>
-          <p>From Georgia, enclosed carriers head up the I-95 spine: Savannah, the Carolinas, Virginia, Baltimore, and into the Delaware Valley. The timing is staged so the car reaches the Philadelphia metro without stacking inventory curbside.</p>
-          <p>At the Porsche Center in Cherry Hill, pre-delivery inspection is completed, paperwork aligns, and the cover comes off. The car that began as a build sheet is now idling a few miles from Center City&mdash;ready to write its own chapter.</p>
+          <div class="step-text">
+            <p>From Georgia, enclosed carriers head up the I-95 spine: Savannah, the Carolinas, Virginia, Baltimore, and into the Delaware Valley. The timing is staged so the car reaches the Philadelphia metro without stacking inventory curbside.</p>
+            <p>At the Porsche Center in Cherry Hill, pre-delivery inspection is completed, paperwork aligns, and the cover comes off. The car that began as a build sheet is now idling a few miles from Center City&mdash;ready to write its own chapter.</p>
+          </div>
+          <figure class="step-media">
+            <img src="image/page6.jpg" alt="Enclosed carrier delivering a Porsche 911 toward Philadelphia" loading="lazy" />
+          </figure>
         </section>
 
         <section class="step" data-step="Closing">
           <h2>Closing &ndash; The long way to the first drive</h2>
-          <p>A 911 travels a continent and an ocean so the first mile can feel effortless. Factories, ports, and schedules fade the moment the flat-six clears its throat and the city opens ahead.</p>
+          <div class="step-text">
+            <p>A 911 travels a continent and an ocean so the first mile can feel effortless. Factories, ports, and schedules fade the moment the flat-six clears its throat and the city opens ahead.</p>
+          </div>
+          <figure class="step-media step-media--video">
+            <iframe
+              src="https://www.youtube.com/embed/cCBYdXxDDY8"
+              title="Inside the Porsche 911 delivery journey"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </figure>
         </section>
       </div>
 
@@ -85,7 +145,7 @@
       </div>
     </aside>
 
-    <button id="story-expand" class="story-expand hidden" type="button" aria-label="Expand story panel">&#9776; Story</button>
+    <button id="story-expand" class="story-expand" type="button" aria-label="Expand story panel">&#9776; Story</button>
   </div>
 
   <script
@@ -96,4 +156,5 @@
   <script src="porsche-911-story.js"></script>
 </body>
 </html>
+
 

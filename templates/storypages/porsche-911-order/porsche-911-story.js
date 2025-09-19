@@ -1,4 +1,74 @@
-ï»¿(function() {
+(function() {
+  var disclaimerBackdrop = document.getElementById("disclaimer-backdrop");
+  var disclaimerPanel = document.getElementById("disclaimer-panel");
+  var disclaimerClose = document.getElementById("disclaimer-close");
+  var disclaimerContinue = document.getElementById("disclaimer-continue");
+  var disclaimerDismissed = false;
+
+  function showDisclaimer() {
+    if (!disclaimerBackdrop || disclaimerDismissed) return;
+    disclaimerBackdrop.setAttribute("aria-hidden", "false");
+    window.requestAnimationFrame(function() {
+      disclaimerBackdrop.classList.add("is-visible");
+      window.setTimeout(function() {
+        if (disclaimerPanel) {
+          disclaimerPanel.focus();
+        }
+      }, 180);
+    });
+  }
+
+  function hideDisclaimer() {
+    if (!disclaimerBackdrop) return;
+    disclaimerBackdrop.classList.remove("is-visible");
+    window.setTimeout(function() {
+      if (!disclaimerBackdrop.classList.contains("is-visible")) {
+        disclaimerBackdrop.setAttribute("aria-hidden", "true");
+      }
+    }, 320);
+  }
+
+  function dismissDisclaimer() {
+    if (disclaimerDismissed) return;
+    disclaimerDismissed = true;
+    hideDisclaimer();
+  }
+
+  function setupDisclaimer() {
+    if (!disclaimerBackdrop || !disclaimerPanel) return;
+
+    disclaimerBackdrop.addEventListener("click", function(event) {
+      if (!disclaimerPanel.contains(event.target)) {
+        dismissDisclaimer();
+      }
+    });
+
+    disclaimerPanel.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+
+    if (disclaimerClose) {
+      disclaimerClose.addEventListener("click", function() {
+        dismissDisclaimer();
+      });
+    }
+
+    if (disclaimerContinue) {
+      disclaimerContinue.addEventListener("click", function() {
+        dismissDisclaimer();
+      });
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        dismissDisclaimer();
+      }
+    });
+
+    window.setTimeout(showDisclaimer, 120);
+  }
+
+  setupDisclaimer();
   var map = L.map("map", {
     zoomControl: true,
     scrollWheelZoom: true,
@@ -255,21 +325,40 @@
   var storyCollapse = document.getElementById("story-collapse");
   var storyExpand = document.getElementById("story-expand");
 
+  function setStoryPanelState(collapsed) {
+    if (!storyPanel) return;
+    storyPanel.classList.toggle("collapsed", collapsed);
+    storyPanel.setAttribute("aria-hidden", collapsed ? "true" : "false");
+    storyPanel.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    if (storyCollapse) {
+      storyCollapse.classList.toggle("hidden", collapsed);
+      storyCollapse.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      storyCollapse.setAttribute("aria-controls", "story");
+    }
+    if (storyExpand) {
+      storyExpand.classList.toggle("hidden", !collapsed);
+      storyExpand.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      storyExpand.setAttribute("aria-controls", "story");
+    }
+  }
+
+  if (storyPanel) {
+    setStoryPanelState(storyPanel.classList.contains("collapsed"));
+  }
+
   if (storyCollapse) {
     storyCollapse.addEventListener("click", function(evt) {
       evt.stopPropagation();
-      storyPanel.classList.add("collapsed");
-      storyCollapse.classList.add("hidden");
-      if (storyExpand) storyExpand.classList.remove("hidden");
+      setStoryPanelState(true);
+      if (storyExpand) storyExpand.focus();
     });
   }
 
   if (storyExpand) {
     storyExpand.addEventListener("click", function(evt) {
       evt.stopPropagation();
-      storyPanel.classList.remove("collapsed");
-      if (storyCollapse) storyCollapse.classList.remove("hidden");
-      storyExpand.classList.add("hidden");
+      setStoryPanelState(false);
+      if (storyCollapse) storyCollapse.focus();
     });
   }
 
@@ -326,8 +415,8 @@
   function updateHeadings() {
     var logisticsHeading = document.querySelector("section[data-step='Intra-Europe logistics'] h2");
     var oceanHeading = document.querySelector("section[data-step='Ocean crossing'] h2");
-    if (logisticsHeading) logisticsHeading.textContent = useAmsterdam ? "Plant to port â€“ Amsterdam" : "Plant to port â€“ Bremerhaven";
-    if (oceanHeading) oceanHeading.textContent = useAmsterdam ? "Across the Atlantic â€“ Amsterdam departure" : "Across the Atlantic";
+    if (logisticsHeading) logisticsHeading.textContent = useAmsterdam ? "Plant to port ¨C Amsterdam" : "Plant to port ¨C Bremerhaven";
+    if (oceanHeading) oceanHeading.textContent = useAmsterdam ? "Across the Atlantic ¨C Amsterdam departure" : "Across the Atlantic";
   }
 
   function updateRouteToggle() {
