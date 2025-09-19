@@ -1,0 +1,327 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "order_flow",
+      "properties": {
+        "name": "Order flow - Philadelphia - Stuttgart",
+        "mode": "information",
+        "step": "Order transmitted",
+        "notes": "Non-physical flow of the order from U.S. buyer to Porsche HQ."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+           -75.1652,
+            39.9526
+          ],
+          [
+           -30.0,
+            45.0
+          ],
+          [
+            0.0,
+            50.0
+          ],
+          [
+            9.151,
+            48.8343
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "plant_to_port",
+      "properties": {
+        "name": "Plant - Export Port - Stuttgart - Bremerhaven",
+        "mode": "road/rail",
+        "step": "Intra-Europe logistics",
+        "notes": "Conceptual plant-to-port movement for export."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.151,
+            48.8343
+          ],
+          [
+            9.0,
+            50.0
+          ],
+          [
+            8.5,
+            52.0
+          ],
+          [
+            8.5809,
+            53.5396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "plant_to_amsterdam",
+      "properties": {
+        "name": "Plant - Export Port - Stuttgart - Amsterdam (alt)",
+        "mode": "road/rail",
+        "step": "Intra-Europe logistics (alt)",
+        "notes": "Conceptual plant-to-port movement for export via Amsterdam."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.151,
+            48.8343
+          ],
+          [
+            7.2,
+            50.5
+          ],
+          [
+            5.8,
+            51.5
+          ],
+          [
+            4.8197,
+            52.409
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sea_leg_bhv",
+      "properties": {
+        "name": "Transatlantic Ro/Ro - Bremerhaven - Brunswick",
+        "mode": "sea",
+        "step": "Ocean crossing",
+        "notes": "Schematic sea route. For visuals only (not navigational)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.5809,
+            53.5396
+          ],
+          [
+            0.0,
+            52.0
+          ],
+          [
+           -10.0,
+            50.0
+          ],
+          [
+           -25.0,
+            45.0
+          ],
+          [
+           -40.0,
+            40.0
+          ],
+          [
+           -55.0,
+            35.0
+          ],
+          [
+           -70.0,
+            32.0
+          ],
+          [
+           -81.546,
+            31.14
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sea_leg_ams",
+      "properties": {
+        "name": "Transatlantic Ro/Ro - Amsterdam - Brunswick (alt)",
+        "mode": "sea",
+        "step": "Ocean crossing (alt)",
+        "notes": "Schematic route alternative to Bremerhaven."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4.8197,
+            52.409
+          ],
+          [
+           -5.0,
+            51.0
+          ],
+          [
+           -20.0,
+            46.0
+          ],
+          [
+           -40.0,
+            40.0
+          ],
+          [
+           -60.0,
+            34.0
+          ],
+          [
+           -81.546,
+            31.14
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "land_leg",
+      "properties": {
+        "name": "Domestic Trucking - Brunswick - Cherry Hill (I-95 corridor)",
+        "mode": "road",
+        "step": "Domestic distribution",
+        "notes": "Simplified corridor path along I-95 toward the Philadelphia metro."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+           -81.546,
+            31.14
+          ],
+          [
+           -81.09,
+            32.08
+          ],
+          [
+           -80.9,
+            34.0
+          ],
+          [
+           -78.8,
+            35.2
+          ],
+          [
+           -77.4,
+            36.7
+          ],
+          [
+           -77.0,
+            38.0
+          ],
+          [
+           -76.6,
+            39.3
+          ],
+          [
+           -75.3,
+            39.9
+          ],
+          [
+           -75.0307,
+            39.934
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_alcantara_to_stuttgart",
+      "properties": {
+        "name": "Material flow - Alcantara (Terni) - Stuttgart",
+        "mode": "supply",
+        "step": "Materials sourced",
+        "notes": "Schematic supply route to Zuffenhausen (illustrative)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            12.4739,
+            42.4984
+          ],
+          [
+            9.151,
+            48.8343
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_bridgeofweir_to_stuttgart",
+      "properties": {
+        "name": "Material flow - Bridge of Weir (Scotland) - Stuttgart",
+        "mode": "supply",
+        "step": "Materials sourced",
+        "notes": "Schematic supply route to Zuffenhausen (illustrative)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+           -4.5789,
+            55.8558
+          ],
+          [
+            9.151,
+            48.8343
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_nijverdal_to_stuttgart",
+      "properties": {
+        "name": "Material flow - Nijverdal (NL) - Stuttgart",
+        "mode": "supply",
+        "step": "Materials sourced",
+        "notes": "Schematic supply route to Zuffenhausen (illustrative)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.4628,
+            52.3639
+          ],
+          [
+            9.151,
+            48.8343
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_meitingen_to_stuttgart",
+      "properties": {
+        "name": "Material flow - Meitingen (DE) - Stuttgart",
+        "mode": "supply",
+        "step": "Materials sourced",
+        "notes": "Schematic supply route to Zuffenhausen (illustrative)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.8529,
+            48.5418
+          ],
+          [
+            9.151,
+            48.8343
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Porsche 911 &ndash; Order to Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="porsche-911-story.css" />
+</head>
+<body>
+  <header class="page-title" role="banner">
+    <div class="title-inner">
+      <h1>PORSCHE 911 - From Order to Home</h1>
+    </div>
+  </header>
+
+  <div id="app">
+    <div id="map" aria-label="Map showing supply chain locations"></div>
+
+    <div id="region-info" class="region-info hidden" role="dialog" aria-modal="false" aria-live="polite">
+      <button id="region-info-close" class="region-info__close" type="button" aria-label="Close region details">&times;</button>
+      <h3 id="region-info-title"></h3>
+      <div id="region-info-body"></div>
+    </div>
+
+    <aside id="story" aria-live="polite">
+      <button id="story-collapse" class="story-collapse" type="button" aria-label="Collapse story panel">&rsaquo;</button>
+      <div class="story-content" id="story-content">
+        <section class="step" data-step="Opening">
+          <h2>Opening &ndash; A 911 is a promise</h2>
+          <p>A 911 order doesn&rsquo;t begin with a VIN; it begins with intent. From the instant a customer in Philadelphia confirms the build, a precise chain wakes up&mdash;engineering, supply, transport, and handover&mdash;linking the car&rsquo;s birthplace in Stuttgart to the streets where it will live.</p>
+          <p>The journey is designed to be uneventful in the best way: predictable slots, clean handoffs, and time buffers that protect the only moment that truly matters&mdash;the first drive.</p>
+        </section>
+
+        <section class="step" data-step="Order placed">
+          <h2>Order placed in Philadelphia</h2>
+          <p>A buyer in the Philadelphia area finalizes the specification&mdash;paint, wheels, interior, packages. The order is validated, assigned a provisional build week, and transmitted to the 911 line in Stuttgart-Zuffenhausen.</p>
+          <p>Scheduling isn&rsquo;t just about the assembly line. Port windows, rail capacity, and ocean vessel space are coordinated upstream so that once the car is built, it doesn&rsquo;t sit.</p>
+        </section>
+
+        <section class="step" data-step="Materials sourced">
+          <h2>Materials gathered for your build</h2>
+          <p>Before the body and drivetrain meet, key components and trims are staged around Stuttgart. Interior leathers are sourced from Scotland&rsquo;s Renfrewshire region. Synthetic suede comes from central Italy (Terni province). Carbon-fiber prepreg arrives from the eastern Netherlands (Overijssel). Carbon-ceramic braking components are produced in Bavaria (around Augsburg/Meitingen).</p>
+          <p>These flows travel by road and rail under controlled timelines. The goal is simple: the right parts at the right gate, minutes before they&rsquo;re needed, never days.</p>
+        </section>
+
+        <section class="step" data-step="Intra-Europe logistics">
+          <h2>Plant to port &ndash; Bremerhaven</h2>
+          <p>Assembly, paint, &ldquo;marriage&rdquo; of drivetrain and body, and end-of-line checks culminate in a road-test loop. Once cleared, completed cars are sealed and transferred to secure compounds for outbound logistics.</p>
+          <p>From Stuttgart the convoy heads north by truck and rail to a deep-water Ro/Ro hub&mdash;typically Bremerhaven on Germany&rsquo;s North Sea, with Amsterdam as an alternate terminal when slots or sailings favor that route.</p>
+        </section>
+
+        <section class="step" data-step="Ocean crossing">
+          <h2>Across the Atlantic</h2>
+          <p>On the ocean leg, reliability beats raw speed. Vehicle carriers depart on set rotations, track weather, and sequence port calls for minimal idle time. While the ship is mid-Atlantic, U.S. inland transport and processing windows are already booked.</p>
+          <p>Arrival is at Colonel&rsquo;s Island Terminal in Brunswick, Georgia&mdash;purpose-built for autos. Vehicles are scanned, inspected, and configured for the U.S. market where needed, then released to carriers for the final leg.</p>
+        </section>
+
+        <section class="step" data-step="Domestic distribution">
+          <h2>Northbound on I-95</h2>
+          <p>From Georgia, enclosed carriers head up the I-95 spine: Savannah, the Carolinas, Virginia, Baltimore, and into the Delaware Valley. The timing is staged so the car reaches the Philadelphia metro without stacking inventory curbside.</p>
+          <p>At the Porsche Center in Cherry Hill, pre-delivery inspection is completed, paperwork aligns, and the cover comes off. The car that began as a build sheet is now idling a few miles from Center City&mdash;ready to write its own chapter.</p>
+        </section>
+
+        <section class="step" data-step="Closing">
+          <h2>Closing &ndash; The long way to the first drive</h2>
+          <p>A 911 travels a continent and an ocean so the first mile can feel effortless. Factories, ports, and schedules fade the moment the flat-six clears its throat and the city opens ahead.</p>
+        </section>
+      </div>
+
+      <nav class="story-nav" aria-label="Slide navigation">
+        <button id="prev-slide" class="story-nav-button" type="button" aria-label="Previous step">&#9664;</button>
+        <span class="story-progress"><span id="current-step">1</span>&nbsp;/&nbsp;<span id="total-steps">7</span></span>
+        <button id="next-slide" class="story-nav-button" type="button" aria-label="Next step">&#9654;</button>
+      </nav>
+
+      <div class="toggles" role="group" aria-label="Export route toggle">
+        <button id="use-bremerhaven" class="toggle on" type="button">Use Bremerhaven</button>
+        <button id="use-amsterdam" class="toggle" type="button">Use Amsterdam (alt)</button>
+      </div>
+    </aside>
+
+    <button id="story-expand" class="story-expand hidden" type="button" aria-label="Expand story panel">&#9776; Story</button>
+  </div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="porsche-911-story.js"></script>
+</body>
+</html>
+

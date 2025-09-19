@@ -1,0 +1,107 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Philadelphia",
+        "role": "Order origin and customer coordination hub"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-75.1852, 39.9376],
+          [-75.1452, 39.9376],
+          [-75.1452, 39.9676],
+          [-75.1852, 39.9676],
+          [-75.1852, 39.9376]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stuttgart",
+        "role": "Zuffenhausen production campus and HQ"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [9.135, 48.822],
+          [9.167, 48.822],
+          [9.167, 48.846],
+          [9.135, 48.846],
+          [9.135, 48.822]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amsterdam",
+        "role": "Alternate North Sea Ro/Ro export terminal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [4.880, 52.364],
+          [4.918, 52.364],
+          [4.918, 52.392],
+          [4.880, 52.392],
+          [4.880, 52.364]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bremerhaven",
+        "role": "Primary North Sea Ro/Ro export terminal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [8.565, 53.528],
+          [8.598, 53.528],
+          [8.598, 53.551],
+          [8.565, 53.551],
+          [8.565, 53.528]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brunswick",
+        "role": "Colonel's Island import terminal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-81.566, 31.128],
+          [-81.526, 31.128],
+          [-81.526, 31.152],
+          [-81.566, 31.152],
+          [-81.566, 31.128]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherry Hill",
+        "role": "Dealer delivery handover"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-75.045, 39.922],
+          [-75.016, 39.922],
+          [-75.016, 39.946],
+          [-75.045, 39.946],
+          [-75.045, 39.922]
+        ]]
+      }
+    }
+  ]
+}

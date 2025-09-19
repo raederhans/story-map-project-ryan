@@ -1,0 +1,225 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "buyer_phl",
+      "properties": {
+        "name": "Buyer - Philadelphia",
+        "step": "Order placed",
+        "city": "Philadelphia, PA",
+        "country": "United States",
+        "notes": "U.S. customer places a 911 order through a local Porsche Center or online.",
+        "source_url": "https://www.porsche.com/usa/",
+        "category": "buyer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1652,
+          39.9526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "porsche_hq",
+      "properties": {
+        "name": "Porsche AG HQ - Stuttgart-Zuffenhausen",
+        "step": "Order received & scheduled",
+        "city": "Stuttgart (Zuffenhausen)",
+        "country": "Germany",
+        "notes": "Corporate headquarters and main plant for the 911 model line.",
+        "source_url": "https://www.porsche.com/usa/locations-and-contact/porsche-ag/",
+        "category": "hq"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.151,
+          48.8343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "plant_zuff",
+      "properties": {
+        "name": "Zuffenhausen Plant - 911 Production",
+        "step": "Vehicle produced & QC",
+        "city": "Stuttgart (Zuffenhausen)",
+        "country": "Germany",
+        "notes": "Production and quality control of the 911 line.",
+        "source_url": "https://newsroom.porsche.com/en/2025/history/porsche-75-years-zuffenhausen-production-anniversary-39059.html",
+        "category": "plant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.151,
+          48.8343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "port_bremerhaven",
+      "properties": {
+        "name": "AutoTerminal Bremerhaven - Export",
+        "step": "Export from Europe",
+        "city": "Bremerhaven",
+        "country": "Germany",
+        "notes": "Major Ro/Ro export port used by German OEMs.",
+        "source_url": "https://www.blg-logistics.com/en/autoterminal-bremerhaven",
+        "category": "port"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5809,
+          53.5396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "port_amsterdam",
+      "properties": {
+        "name": "Koopman Car Terminal - Port of Amsterdam (alt)",
+        "step": "Export from Europe (alt)",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "notes": "Ro/Ro automotive terminal alternative to Bremerhaven.",
+        "source_url": "https://myport.portofamsterdam.com/en/portle/company/koopman-car-terminal-bv-kct",
+        "category": "port"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.8197,
+          52.409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "port_brunswick",
+      "properties": {
+        "name": "Port of Brunswick - Colonel's Island Terminal",
+        "step": "U.S. port processing",
+        "city": "Brunswick, GA",
+        "country": "United States",
+        "notes": "Nation's leading auto port; PCNA long-time operations hub.",
+        "source_url": "https://gaports.com/facilities/port-of-brunswick/colonels-island-terminal/",
+        "category": "port"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.546,
+          31.14
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dealer_cherryhill",
+      "properties": {
+        "name": "Porsche Cherry Hill - Delivery Center",
+        "step": "Retail delivery",
+        "city": "Cherry Hill, NJ (Philadelphia metro)",
+        "country": "United States",
+        "notes": "Local dealer delivering the vehicle to the customer.",
+        "source_url": "https://www.porschecherryhill.com/contact-us/",
+        "category": "dealer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.0307,
+          39.934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_alcantara_terni",
+      "properties": {
+        "name": "Alcantara S.p.A. - Nera Montoro Plant",
+        "step": "Materials sourced",
+        "city": "Nera Montoro (Terni)",
+        "country": "Italy",
+        "notes": "Synthetic suede (Alcantara) origin for interior trims (illustrative).",
+        "source_url": "https://www.alcantara.com/corporate/",
+        "category": "material"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4739,
+          42.4984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_leather_bridgeofweir",
+      "properties": {
+        "name": "Bridge of Weir - Automotive Leather",
+        "step": "Materials sourced",
+        "city": "Bridge of Weir, Renfrewshire",
+        "country": "Scotland, UK",
+        "notes": "Automotive leather supplier location (illustrative).",
+        "source_url": "https://www.bridgeofweirleather.com/contact",
+        "category": "material"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.5789,
+          55.8558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_carbon_prepreg_nijverdal",
+      "properties": {
+        "name": "Toray Advanced Composites - Nijverdal",
+        "step": "Materials sourced",
+        "city": "Nijverdal, Overijssel",
+        "country": "Netherlands",
+        "notes": "Carbon fiber prepreg for components (illustrative).",
+        "source_url": "https://www.toraytac.com/contact/locations",
+        "category": "material"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4628,
+          52.3639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "material_pccb_meitingen",
+      "properties": {
+        "name": "Brembo SGL Carbon Ceramic Brakes - Meitingen",
+        "step": "Materials sourced",
+        "city": "Meitingen, Bavaria",
+        "country": "Germany",
+        "notes": "Carbon-ceramic brake disc production site (illustrative).",
+        "source_url": "https://www.carbonceramicbrakes.com/en/Contacts",
+        "category": "material"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8529,
+          48.5418
+        ]
+      }
+    }
+  ]
+}
